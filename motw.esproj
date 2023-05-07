@@ -3,10 +3,20 @@
     <StartupCommand>npm start</StartupCommand>
     <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
     <!-- Command to run on project build -->
-    <BuildCommand></BuildCommand>
+    <BuildCommand>
+    </BuildCommand>
     <!-- Command to create an optimized build of the project that's ready for publishing -->
     <ProductionBuildCommand>npm run build</ProductionBuildCommand>
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\motw</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="node_modules\bootstrap\dist\css\bootstrap.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Remove="docs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="docs\**" />
+  </ItemGroup>
 </Project>

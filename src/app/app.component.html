@@ -1,1 +1,13 @@
-hello world
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Powered by the Apocalypse Character Sheets</h1>
+            <label>Select Your Game</label>
+            <select class="form-control" (change)="GameSelected($event)">
+                <option value="motw" selected>Monster of the Week</option>
+                <option value="masks">Masks: A New Generation</option>
+            </select>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
