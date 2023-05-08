@@ -1,1 +1,59 @@
-Monster of the week is under construction.
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-md">
+            <h3>{{Character.Name}}</h3>
+            <p>{{Character.Description}}</p>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-addon">Charm</span>
+                <input type="number" class="form-control" max="3" min="-2" [(ngModel)]="Character.Charm" />
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-addon">Cool </span>
+                <input type="number" class="form-control" max="3" min="-2" [(ngModel)]="Character.Cool" />
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-addon">Sharp</span>
+                <input type="number" class="form-control" max="3" min="-2" [(ngModel)]="Character.Sharp" />
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-addon">Tough</span>
+                <input type="number" class="form-control" max="3" min="-2" [(ngModel)]="Character.Tough" />
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-addon">Weird</span>
+                <input type="number" class="form-control" max="3" min="-2" [(ngModel)]="Character.Weird" />
+            </div>
+        </div>
+        <div class="col-md">
+            <label style="margin-top:10px;">Luck Left: {{7 - Character.LuckUsed}}</label>
+            <input type="range" class="form-range" min="0" max="7" [(ngModel)]="Character.LuckUsed" />
+            <label>Harm Taken: {{Character.Harm}}</label>
+            <input type="range" class="form-range" min="0" max="7" [(ngModel)]="Character.Harm" />
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="Character.Unstable" id="unstable" />
+                <label class="form-check-label" for="unstable">Unstable</label>
+            </div>
+            <label>Experience: {{Character.Experience}}</label>
+            <input type="range" class="form-range" min="0" max="5" [(ngModel)]="Character.Experience" />
+        </div>
+        <div class="col-md">
+            <div style="margin-top:10px;">Gear</div>
+            <button type="button" class="btn btn-outline-dark btn-sm">Add Gear</button>
+
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div>Moves</div>
+            <button type="button" class="btn btn-outline-dark btn-sm">Add Move</button>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-floating">
+            <textarea [(ngModel)]="Character.Notes" autosize class="form-control" style="resize:none"></textarea>
+                <label for="notes">Notes</label>
+            </div>
+        </div>
+    </div>
+</div>

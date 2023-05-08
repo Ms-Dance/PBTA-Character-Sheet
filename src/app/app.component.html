@@ -1,12 +1,18 @@
+
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-top: 5px;">
         <div class="col">
-            <h1>Powered by the Apocalypse Character Sheets</h1>
-            <label>Select Your Game</label>
-            <select class="form-control" (change)="GameSelected($event)">
-                <option value="motw" selected>Monster of the Week</option>
-                <option value="masks">Masks: A New Generation</option>
-            </select>
+            <h6 (click)="HeadingChange()">
+                <fa-icon [icon]="Bars" style="padding-right:5px;"></fa-icon>
+                <span *ngIf="ShowGameSelectMenu">Powered by the Apocalypse Character Sheets</span>
+            </h6>
+            <div *ngIf="ShowGameSelectMenu">
+                <label>Select Your Game</label>
+                <select class="form-select" (change)="GameSelected($event)">
+                    <option value="motw" selected>Monster of the Week</option>
+                    <option value="masks">Masks: A New Generation</option>
+                </select>
+            </div>
         </div>
     </div>
 </div>
